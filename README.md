@@ -9,9 +9,11 @@ First specify string array with hint text as the last item, eg:
 &lt;/string-array>
 
 Then use it in your code:
-<p2>MyAdapter&lt;String> myAdapter = new DefaultArrayAdapter(getActivity(), android.R.layout.simple_spinner_dropdown_item);
+```java
+MyAdapter<String> myAdapter = new DefaultArrayAdapter(getActivity(), android.R.layout.simple_spinner_dropdown_item);
 myAdapter.addAll(getResources().getStringArray(R.array.array_baby_sex_hint));
 MySpinner.setAdapter(myAdapter);
-MySpinner.setSelection(MySpinner.getCount());</p2>
+MySpinner.setSelection(MySpinner.getCount());    
+```
 
 You can modify the layout as you expect.
